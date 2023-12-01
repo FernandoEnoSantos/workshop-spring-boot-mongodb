@@ -24,7 +24,7 @@ import com.fernandosantos.workshopmongo.services.UserService;
 public class UserResource {
 	
 	@Autowired
-	private UserService service; //fiz uma confusão no commit anteriores, inverti as classes postResource com userResource. agora está de acordo
+	private UserService service;//fiz uma confusão no commit anteriores, inverti as classes postResource com userResource. agora está de acordo
 	
 	@RequestMapping(method = RequestMethod.GET) //poderia ser anotation @GetMapping no lugar
 	public ResponseEntity<List<UserDTO>> findAll(){
@@ -77,6 +77,8 @@ public class UserResource {
 		return ResponseEntity.ok().body(obj.getPosts());
 		
 	}
+	
+	
 	
 	
 	

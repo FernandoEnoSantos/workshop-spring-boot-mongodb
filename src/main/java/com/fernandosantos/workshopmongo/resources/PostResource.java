@@ -18,6 +18,8 @@ import com.fernandosantos.workshopmongo.services.PostService;
 @RequestMapping(value = "/posts")
 public class PostResource {
 	
+
+	
 	@Autowired
 	private PostService service; //fiz uma confusão no commit anteriores, inverti as classes postResource com userResource. agora está de acordo
 	
@@ -37,9 +39,8 @@ public class PostResource {
 		text = URL.decodeParam(text);
 		List<Post> list = service.findByTitle(text);
 		return ResponseEntity.ok().body(list);
-		
+
 	}
-	
 	
 	
 }
